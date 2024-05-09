@@ -16,16 +16,32 @@ public class JpaMain {
 
     //모든 데이터를 변경하는 모든 작업은 jpa에서 꼭 trasction안에서 작업을 해야한다.
     tx.begin();
-        Member member = new Member();
-        member.setId(1L);
-        member.setName("HelloA");
-        em.persist(member);//member 저장
 
-    tx.commit();
-        //code
+    try { //정상적일 때는 커밋을 하고
+        //등록
+        // Member member = new Member();
+        // member.setId(2L);
+        // member.setName("HelloB");
+        // em.persist(member);//member 저장
+
+        //조회
+        Member findMember= em.find(Member.class, 1L);
+
+        //삭제
+        //em.remove(findMember);
+
+        //수정(기존 값이랑 다르면 알아서 바꿔줌. HelloA -> HelloJPA
+        findMember.setName("HelloJPA");
+
+
+        tx.commit();
+    }catch (Exception e){
+        //문제가 생기면 롤백
+        tx.rollback();
+    }finally {
         em.close();
-
-        emf.close();
+    }
+    emf.close();
 
     }
 }
