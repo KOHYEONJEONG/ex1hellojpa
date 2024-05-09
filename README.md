@@ -8,7 +8,7 @@ maven(version 4.0.0)
 ## 다운로드
 [H2 DATABASE 다운로드](https://www.h2database.com/html/main.html)
 
-#실행
+# 실행
 H2 콘솔 실행 후 127.0.0.1:8082 접속
 
 ## pom.xml 설정
