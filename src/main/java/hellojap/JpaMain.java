@@ -25,13 +25,13 @@ public class JpaMain {
         // em.persist(member);//member 저장
 
         //조회
-        Member findMember= em.find(Member.class, 1L);
+        //Member findMember= em.find(Member.class, 1L);
 
         //삭제
         //em.remove(findMember);
 
         //수정(기존 값이랑 다르면 알아서 바꿔줌. HelloA -> HelloJPA
-        findMember.setName("HelloJPA");
+       // findMember.setName("HelloJPA ");
 
 
         tx.commit();
