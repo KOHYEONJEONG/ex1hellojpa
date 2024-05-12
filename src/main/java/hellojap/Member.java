@@ -9,6 +9,7 @@ public class Member {
     @Id//JPA한테 PK가 뭔지 알려줘야 함.
     private Long id;
     private String name;
+    private int age;
 
     //기본생성자 꼭 필요함
     public Member() {
