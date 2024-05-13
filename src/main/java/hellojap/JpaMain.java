@@ -10,6 +10,7 @@ public class JpaMain {
 
     //src/main/resources/META-INF/persistence.xml  name속성="hello"
     //ctrl+alt+v : 변수 생성
+        //
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
     EntityManager em = emf.createEntityManager();
     EntityTransaction tx = em.getTransaction();
