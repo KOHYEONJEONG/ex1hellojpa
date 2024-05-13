@@ -19,7 +19,10 @@ public class JpaMain {
     tx.begin();
 
     try { //정상적일 때는 커밋을 하고
+        Member member = new Member();
 
+        member.setUsername("gd");
+        em.persist(member);//member 저장
         tx.commit();
     }catch (Exception e){
         //문제가 생기면 롤백
