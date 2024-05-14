@@ -1,4 +1,4 @@
-package hellojap;
+package hellojpa;
 
 public enum RoleType {
     //

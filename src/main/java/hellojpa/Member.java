@@ -1,7 +1,6 @@
-package hellojap;
+package hellojpa;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity //JPA를 사용하는 애라고 인식시킴
 @SequenceGenerator(name = "MEMBER_SEQ_GENERATOR",
@@ -16,6 +15,11 @@ public class Member {
 
     @Column(name = "name", nullable = false, columnDefinition = "varchar(100) default 'EMPTY'") //DB에서는 username 컬럼명이 아님 name명으로 사용하고 싶을때
     private String username;
+
+
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
 
     public Member() {
     }
