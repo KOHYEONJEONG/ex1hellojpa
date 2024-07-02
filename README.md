@@ -1,5 +1,5 @@
 # JPA 강의
-인프런-김영한 강사님
+인프런-김영한강사님
 
 ## 기록
 [쿠키린 티스토리](https://hyeonddobbi.tistory.com/category/%E2%97%86SPRING%20BOOT/JPA)
