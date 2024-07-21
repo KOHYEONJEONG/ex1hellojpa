@@ -20,9 +20,22 @@ public class JpaMain {
 
     try { //정상적일 때는 커밋을 하고
 
-        //객체는 참조를 사용해서 연관된 객체를 찾는다.
-        
+        //저장
+        Team team = new Team();
+        team.setName("TeamA");
+        em.persist(team);
 
+        Member member = new Member();
+        member.setUsername("member1");
+        member.setTeam(team); //(중요) jpa가 알아서 Team에서 pk를 꺼내서 fk 값에 인서트할때 사용
+        em.persist(member);
+
+        em.flush();
+        em.clear();
+
+        Member findMember = em.find(Member.class, member.getId());// id로 조회해서 꺼내겠다
+        Team findTime = findMember.getTeam();//바로 꺼낼 수 있음.(연관관계 매핑때문에)
+        System.out.println("findTeam = "+findTime.getName()); // findTeam = TeamA
 
         tx.commit();
     }catch (Exception e){
