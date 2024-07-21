@@ -20,6 +20,10 @@ public class JpaMain {
 
     try { //정상적일 때는 커밋을 하고
 
+        //객체는 참조를 사용해서 연관된 객체를 찾는다.
+        
+
+
         tx.commit();
     }catch (Exception e){
         //문제가 생기면 롤백
