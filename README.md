@@ -4,7 +4,7 @@
 ## 기록
 [쿠키린 티스토리](https://hyeonddobbi.tistory.com/category/%E2%97%86SPRING%20BOOT/JPA)
 
-## 프로젝트 
+## 프로젝트  
 maven(version 4.0.0)
 
 ## 다운로드
