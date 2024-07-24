@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class JpaMain {
     public static void main(String[] args) {
@@ -34,9 +35,15 @@ public class JpaMain {
         em.clear();
 
         Member findMember = em.find(Member.class, member.getId());// id로 조회해서 꺼내겠다
-        Team findTime = findMember.getTeam();//바로 꺼낼 수 있음.(연관관계 매핑때문에)
-        System.out.println("findTeam = "+findTime.getName()); // findTeam = TeamA
+//        Team findTime = findMember.getTeam();//바로 꺼낼 수 있음.(연관관계 매핑때문에)
+//        System.out.println("findTeam = "+findTime.getName()); // findTeam = TeamA
 
+        //양방향 연관관계(멤버에서 팀으로, 팀에서 멤버로 왔다갔다)
+        List<Member> members = findMember.getTeam().getMembers();
+
+        for (Member m:members){
+            System.out.println("m= "+m.getUsername());
+        }
         tx.commit();
     }catch (Exception e){
         //문제가 생기면 롤백
