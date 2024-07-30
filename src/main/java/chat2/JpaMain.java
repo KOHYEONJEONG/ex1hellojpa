@@ -1,4 +1,4 @@
-package hellojpa;
+package chat2;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
