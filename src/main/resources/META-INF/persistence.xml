@@ -18,7 +18,7 @@
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
             <property name="hibernate.jdbc.batch_size" value="10"/>   <!--버퍼링 기능 : 한번에 모았다가 db에 전송-->
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="none" />
         </properties>
     </persistence-unit>
 </persistence>

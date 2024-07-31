@@ -22,12 +22,14 @@ public class JpaMain {
     tx.begin();
 
     try { //정상적일 때는 커밋을 하고
-        Member2 member2 = new Member2();
-        member2.setId(1L);
-        member2.setUsername("A");
-        member2.setRoleType(RoleType.USER);
+//        Member2 member = new Member2();
+//        member.setId(1L);
+//        member.setUsername("A");
+//        member.setRoleType(RoleType.USER);
 
-        em.persist(member2);
+        MemberPK member = new MemberPK();
+        member.setName("A");
+        em.persist(member);
 
         tx.commit();
     }catch (Exception e){
