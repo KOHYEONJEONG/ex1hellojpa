@@ -2,7 +2,7 @@ package chat3;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Member3 {
 
     @Id

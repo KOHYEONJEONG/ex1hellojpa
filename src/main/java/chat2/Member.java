@@ -2,7 +2,7 @@ package chat2;
 
 import javax.persistence.*;
 
-@Entity //JPA를 사용하는 애라고 인식시킴
+//@Entity //JPA를 사용하는 애라고 인식시킴
 //@SequenceGenerator(name = "MEMBER_SEQ_GENERATOR",
 //                sequenceName = "MEMBER_SEQ",
 //                initialValue = 1, allocationSize = 50

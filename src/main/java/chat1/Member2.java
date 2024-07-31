@@ -5,7 +5,7 @@ import chat2.RoleType;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+//@Entity
 public class Member2 {
 
     @Id

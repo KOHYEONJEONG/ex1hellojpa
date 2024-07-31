@@ -16,7 +16,7 @@ public class Member5 {
 
     @ManyToOne //Member 입장에서는 many이면서 Team 입장에서는 one이기 때문
     @JoinColumn(name = "TEAM_ID") //연관관계 매핑
-    private Team4 team;
+    private Team5 team;
 
 
     public Long getId() {
@@ -35,11 +35,11 @@ public class Member5 {
         this.username = username;
     }
 
-    public Team4 getTeam() {
+    public Team5 getTeam() {
         return team;
     }
 
-    public void setTeam(Team4 team) {
+    public void setTeam(Team5 team) {
         this.team = team;
     }
 }

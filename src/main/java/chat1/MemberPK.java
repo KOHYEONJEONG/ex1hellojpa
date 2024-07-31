@@ -2,7 +2,7 @@ package chat1;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 @SequenceGenerator(name="MEMBER_SEQ_GENERATOR",
                     sequenceName = "MEMBER_SEQ",
                     initialValue = 1,   // initialValue : 기본값 1
