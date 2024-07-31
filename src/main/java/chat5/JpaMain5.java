@@ -1,14 +1,14 @@
-package chat4;
+package chat5;
 
-import chat2.Team;
-import chat3.Member3;
+import chat4.Member4;
+import chat4.Team4;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaMain4 {
+public class JpaMain5 {
     public static void main(String[] args) {
 
         //ctrl+alt+v : 변수 생성
