@@ -34,12 +34,11 @@ public class JpaMain4 {
 
             em.persist(member);
 
-//            em.flush();  //현재 영속성 컨텍스트에 있는 디비에 쿼리를 다 날려 버림.
-//            em.clear();  //영속성 컨텍스트 초기화
-
             Member4 findMember=em.find(Member4.class, member.getId()); //영속성 컨텍스트 - 콘솔창에 select문이 없는 이유는, 1차 캐시에서 가져옴(만약에 캐시에서 안가져오고 싶다면, flush()와 clear()사용하자)
 
-            Team4 findTeam = findMember.getTeam(); //연관관계 매핑을 해뒀기 때문에, 바로 꺼내서 사용 가능하다!
+            //단방향 연관관계 매핑을 해뒀기 때문에, 바로 꺼내서 사용 가능하다! 다만 ㅅㄷ
+            Team4 findTeam = findMember.getTeam();
+
             System.out.println("findTeam = "+findTeam.getName()); //findTeam = TeamA
 
 

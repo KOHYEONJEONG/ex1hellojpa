@@ -33,12 +33,13 @@ public class JpaMain5 {
 
             em.persist(member);
 
-            em.flush();  //현재 영속성 컨텍스트에 있는 디비에 쿼리를 다 날려 버림.
+            em.flush();  //현재 영속성 컨텍스트에 있는 디비에 쿼리를 다 날려 버림.(이제 find()사용 시 캐시가 아닌, db에서 조회할거임. - select ....)
             em.clear();  //영속성 컨텍스트 초기화
 
             Member5 findMember=em.find(Member5.class, member.getId()); //영속성 컨텍스트 - 콘솔창에 select문이 없는 이유는, 1차 캐시에서 가져옴(만약에 캐시에서 안가져오고 싶다면, flush()와 clear()사용하자)
 
-            List<Member5> member5s = findMember.getTeam().getMembers();
+            //양방향 연관관계
+            List<Member5> member5s = findMember.getTeam().getMembers(); //(이제 서로 조회 가능해졌다)
 
             for(Member5 m: member5s){
                 System.out.println("m = "+m.getUsername());//m = member1
