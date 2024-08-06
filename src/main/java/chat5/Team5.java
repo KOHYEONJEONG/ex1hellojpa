@@ -14,6 +14,7 @@ public class Team5 {
     private Long id;
     private String name;
 
+    //중요. mappedBy가 있으면 주인이 아니며 읽기 전용이라는 뜻이다.
     @OneToMany(mappedBy="team") // Member의 team이랑 연결되어 있다는 뜻(team으로 맵핑되어있다 뜻)
     private List<Member5> members = new ArrayList<>();
 

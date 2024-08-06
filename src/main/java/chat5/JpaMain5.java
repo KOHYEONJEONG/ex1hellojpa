@@ -24,7 +24,6 @@ public class JpaMain5 {
             Team5 team = new Team5();
             team.setName("TeamA");
 
-
             em.persist(team);//영속상태가 되면 무조건 pk 값이 세팅되고 영속상태가 된다.
 
             Member5 member = new Member5();
@@ -37,13 +36,15 @@ public class JpaMain5 {
             em.clear();  //영속성 컨텍스트 초기화
 
             Member5 findMember=em.find(Member5.class, member.getId()); //영속성 컨텍스트 - 콘솔창에 select문이 없는 이유는, 1차 캐시에서 가져옴(만약에 캐시에서 안가져오고 싶다면, flush()와 clear()사용하자)
-
             //양방향 연관관계
             List<Member5> member5s = findMember.getTeam().getMembers(); //(이제 서로 조회 가능해졌다)
 
             for(Member5 m: member5s){
                 System.out.println("m = "+m.getUsername());//m = member1
             }
+
+
+   //주의
 
             tx.commit();
         }catch (Exception e) {

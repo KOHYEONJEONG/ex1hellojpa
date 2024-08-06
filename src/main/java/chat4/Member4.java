@@ -4,7 +4,7 @@ import chat2.Team;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Member4 {
 
     @Id
