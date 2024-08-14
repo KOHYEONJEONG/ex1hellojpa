@@ -2,7 +2,7 @@
 인프런-김영한 강사님
 
 ## 기록
-[쿠키린 티스토리](https://hyeonddobbi.tistory.com/category/%E2%97%86%20ORM)
+[쿠키린 티스토리-ORM 카테고리](https://hyeonddobbi.tistory.com/category/%E2%97%86%20ORM)
 
 ## 프로젝트  
 maven(version 4.0.0)
